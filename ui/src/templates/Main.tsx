@@ -38,8 +38,8 @@ const Main = (props: IMainProps) => {
         </div>
       </div>
       <div className="footer">
-        <div className="mx-auto max-w-screen-md">
-          erewr
+        <div className="footer__desc">
+          &copy; MODSHOP Clothing
         </div>
       </div>
     </div>

@@ -8,9 +8,11 @@ type ISectionProps = {
 const Section = (props: ISectionProps) => {
   const { data } = props;
   return (
-    <div>
-      <h2>{data.title}</h2>
-      <div>{data.data.map((product: LocalProduct) => <Product data={product} />)}</div>
+    <div className="section">
+      <h2 className="section__title">{data.title}</h2>
+      <div className="section__data">{data.data.map(
+        (product: LocalProduct, i: number) => <Product data={product} key={i} />
+      )}</div>
     </div>
   );
 }

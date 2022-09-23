@@ -1,8 +1,27 @@
+type ImageFormat = {
+  ext: string;
+  hash: string;
+  height: number;
+  mime: string;
+  name: string;
+  path: string;
+  size: number;
+  url: string;
+  width: number;
+};
+
+
 type ProductImageAttributes = {
   alternativeText: string;
   caption: string;
   createdAt: string;
   ext: string;
+  formats: {
+    large: ImageFormat;
+    medium: ImageFormat;
+    small: ImageFormat;
+    thumbnail: ImageFormat;
+  }
   hash: string;
   height: number;
   mime: string;
@@ -13,14 +32,14 @@ type ProductImageAttributes = {
   updatedAt: string;
   url: string;
   width: number;
-};
+}
 
 type ProductImage = {
   data: {
     id: number;
     attributes: ProductImageAttributes;
   }
-};
+}
 
 
 type LocalProduct = {
@@ -32,7 +51,7 @@ type LocalProduct = {
   title: string;
   type: string;
   updatedAt: string;
-};
+}
 
 type ServerProduct = {
   id: number;
@@ -45,4 +64,4 @@ type ServerProduct = {
     type: string;
     updatedAt: string;
   }
-};
+}

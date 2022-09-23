@@ -57,7 +57,7 @@ const Index = () => {
       }
     >
       {content}
-      {!content && data?.map((section: ProductSection) => (<Section data={section} />)) }
+      {!content && data?.map((section: ProductSection, i: number) => (<Section data={section} key={i} />)) }
     </Main>
   );
 };
