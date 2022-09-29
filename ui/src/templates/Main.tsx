@@ -22,11 +22,11 @@ const Main = (props: IMainProps) => {
             <a className="menu__home"/>
           </Link>
           <div className="flex justify-between">
-            <Link href="/">
-              <a className="menu__link">Login</a>
-            </Link>
             <Link href="/register/">
               <a className={`menu__link ${router.route === '/register' ? 'menu__link--active' : ''}`}>Register</a>
+            </Link>
+            <Link href="/register-formik/">
+              <a className="menu__link">Register Formik</a>
             </Link>
 
           </div>
